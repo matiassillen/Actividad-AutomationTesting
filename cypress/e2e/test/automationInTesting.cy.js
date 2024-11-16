@@ -15,4 +15,9 @@ describe("TEST", { testIsolation: false }, () => {
     cy.get("p").contains("fake@fakeemail.com").should("be.visible");
     cy.get("p").find("span.fa.fa-envelope").should("be.visible");
   });
+
+  it("Verificar que haya al menos una imagen visible", () => {
+    cy.get('img[src="/images/rbp-logo.jpg"]').should("be.visible");
+    cy.get('img[src="/images/room2.jpg"]').should("be.visible");
+  });
 });
